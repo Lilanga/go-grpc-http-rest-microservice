@@ -31,5 +31,5 @@ FROM debian:stretch-slim
 WORKDIR /dist
 COPY --from=builder /dist/dist/ .
 
-ENTRYPOINT ["./server-grpc" ,"-grpc-port=9090", "-db-host=db:3306", "-db-user=root", "-db-password=1qaz2wsx@", "-db-schema=todo", "-log-level=-1", "-log-time-format=2006-01-02T15:04:05.999999999Z07:00"]
+ENTRYPOINT ["./server-grpc", "-grpc-port=9090", "-db-host=db:3306", "-db-user=root", "-db-password=1qaz2wsx@", "-db-schema=todo", "-log-level=-1", "-log-time-format=2006-01-02T15:04:05.999999999Z07:00"]
 EXPOSE 9090
